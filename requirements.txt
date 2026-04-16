@@ -1,0 +1,8 @@
+pandas 
+azure-storage-blob 
+psycopg2-binary
+dbt-postgres
+dbt-core 
+dbt-common
+mashumaro
+sqlalchemy

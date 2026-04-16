@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# dbt
+dbt_transformation/target/
+dbt_transformation/dbt_packages/
+dbt_transformation/logs/
+
+# Airflow
+logs/
+airflow_db/
+
+# Docker & Azurite
+__blobstorage__/

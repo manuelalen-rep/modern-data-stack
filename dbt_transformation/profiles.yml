@@ -1,0 +1,12 @@
+modern_data_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres_db
+      user: planner_user
+      pass: planner
+      port: 5432
+      dbname: modern_data_stack
+      schema: analytics
+      threads: 4

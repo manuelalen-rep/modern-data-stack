@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: sap_data
+    database: modern_data_stack
+    schema: bronze
+    # Configuración de frescura (Freshness)
+    freshness:
+      warn_after: {count: 20, period: hour}
+      error_after: {count: 24, period: hour}
+    loaded_at_field: updated_at # Columna técnica de control
+
+    tables:
+      - name: zt_prod_clothing
+        columns:
+          - name: aufnr
+            description: "Número de orden de fabricación (PK)"
+            tests:
+              - unique
+              - not_null
